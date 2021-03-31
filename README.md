@@ -1,10 +1,21 @@
-# Python Samples
-Code examples for using Python within Origin
+## Origin Python Samples
 
-To try the samples, use the following steps
+Code examples for using the **originpro** Python package to interact with Origin software.
 
-1. From Origin, select the menu Connectivity > Open .... This will open Code Builder with the py file
+These examples will work with either the built-in Python interpreter in Origin, or via an external Python interpreter. All of the examples will work *as is* with the embedded interpreter. When using them with an external interpreter, some simple modification is required as illustrated in the [External Python Code Samples documentation](https://www.originlab.com/doc/ExternalPython/External-Python-Code-Samples). 
 
-2. Press F5 to run the sample. You do not need to save the file before running.
+### Running the Examples
 
-Note that several examples require Python packages to be installed first. Use the script command provided to install the package, then copy the sample code to the Python IDE in Code Builder to run.
+The easiest way to run these examples is to [**download this repo as a zip file**](https://github.com/originlab/Python-Samples/archive/refs/heads/main.zip).
+
+Then, simply unzip the files and open the desired file from the File menu in **Code Builder**. Then, hit **F5** to run the example.
+
+*Note that some examples require the installation of additional Python packages.*
+
+### Documentation
+
+For embedded Python interpreter, [please click here](https://www.originlab.com/doc/python/Run-Python-in-Origin).
+
+For external Python interpreter, [please click here](https://www.originlab.com/doc/ExternalPython).
+
+For the **originpro** package documentation, [please click here](https://www.originlab.com/python/doc/originpro/annotated.html).

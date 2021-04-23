@@ -1,1 +1,1 @@
-For matrixsheet related function, see [matrixsheet](https://www.originlab.com/python/doc/originpro/classoriginpro_1_1matrix_1_1_m_sheet.html). For project related function, see [project](https://www.originlab.com/python/doc/originpro/functions_func.html).
+For matrixsheet related functions, see [matrixsheet](https://www.originlab.com/python/doc/originpro/classoriginpro_1_1matrix_1_1_m_sheet.html). For project related functions, see [project](https://www.originlab.com/python/doc/originpro/functions_func.html).

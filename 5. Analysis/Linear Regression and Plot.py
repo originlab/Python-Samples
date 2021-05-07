@@ -23,14 +23,14 @@ wCurves=op.find_sheet('w', c)
 gp = op.new_graph()
 gl = gp[0]
 
-#plot data as scatter plot
+# Plot data as scatter plot
 pltdata = gl.add_plot(wks, 1, 0, type='s')
 
 # Add the confidence band
 conf = gl.add_plot(wCurves, 2, 0) 
 gl.add_plot(wCurves, 3, 0)
 
-#group the newly added plots, starting from 1 to skip the scatter data
+# Group the newly added plots, starting from 1 to skip the scatter data
 gl.group(True, 1)
 conf.colorinc=0
 conf.transparency = 80
@@ -40,3 +40,9 @@ gl.add_plot(wCurves, 1, 0) # Plot the fitted line
 
 gl.rescale()
 
+# Customize legend
+lgnd = gl.label('Legend')
+lgnd.text='\\l(4) Linear Fit\n\\l(2) Confidence Band'
+lgnd.set_int('left',1400)
+lgnd.set_int('top',700)
+lgnd.set_int('showframe',0)

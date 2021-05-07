@@ -17,3 +17,10 @@ gl.group()
 plot.colormap = 'Candy'
 plot.shapelist = [3, 2, 1]
 gl.rescale()
+
+# Customize Legend
+lgnd = gl.label('Legend')
+lgnd.set_int('fsize', 22)
+lgnd.set_int('left',1400)
+lgnd.set_int('top',700)
+lgnd.set_int('showframe',0)

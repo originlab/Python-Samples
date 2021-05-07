@@ -1,6 +1,7 @@
 '''
 This sample shows how to make multi-layer graph with Python 
-where data on each layer is from different worksheet.
+where data on each layer is from different worksheet. Legend 
+is customized to show sheet name.
 '''
 import os
 import originpro as op
@@ -21,4 +22,10 @@ for i, gl in enumerate(gp):
     gl.group()
     gl.rescale()
     
+# Customize legend
+lgnd = gp[1].label('Legend')
+lgnd.text='\l(1) %(1, @ws)\n\l(2) %(2, @ws)\n\l(3) %(3, @ws)'
+lgnd.set_int('left',4900)
+lgnd.set_int('top',100)
 
+gp[0].label('Legend').remove()

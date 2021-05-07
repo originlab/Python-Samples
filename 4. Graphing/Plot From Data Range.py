@@ -20,4 +20,8 @@ plot = gl.add_plot(f'{wks.lt_range()}!(1,3)[41:60]')
 gl.group()
 gl.rescale()
 
-
+# Customize legend
+lgnd = gl.label('Legend')
+lgnd.text='\l(1) class 1  \l(2) class 2  \l(3) class 3'
+lgnd.set_int('left',1400)
+lgnd.set_int('showframe',0)

@@ -44,3 +44,8 @@ for i in range(3):
     gp[i].add_plot(wks_result,1+i,0)
     gp[i].rescale()
 
+# Customize Legend
+lgnd = gp[0].label('Legend')
+lgnd.text='\l(1.1) %(1.1)   \l(2.1) %(2.1)   \l(3.1) %(3.1)'
+lgnd.set_int('fsize', 27)
+lgnd.set_int('top', 400)

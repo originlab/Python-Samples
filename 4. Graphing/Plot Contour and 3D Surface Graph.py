@@ -14,7 +14,7 @@ wks.cols_axis('xyz')
 # Plot 3D surface
 gp = op.new_graph(template='glCMAP')
 p = gp[0].add_plot(wks,coly=1,colx=0,colz=2, type=103) 
-gl.rescale()
+gp[0].rescale()
 
 # Plot contour
 gp = op.new_graph(template='TriContour')

@@ -1,15 +1,14 @@
 '''
-This sample shows how to use from_file function to import data to worksheet
+This sample shows how to use from_file function to import text data to worksheet
 '''
 import originpro as op
 
-# file full path to import
 f = op.path('e')+r'Samples\Curve Fitting\Enzyme.dat'
 
 #assume active worksheet
 wks = op.find_sheet()
 
-# import the file into the worksheet and keep the Data Connector
+#By default, CSV connector is used
 wks.from_file(f)
 
 print(wks.shape)

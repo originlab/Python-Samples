@@ -6,11 +6,14 @@ import originpro as op
 f = op.path('e')+r'Samples\Import and Export\S15-125-03.dat'
 wks = op.new_sheet()
 
+#Use CSV connector which is the default
+#and connector will be removed after import
+dc = op.Connector(wks)
+
 #Specify the rows to import
-dc = op.Connector(wks, keep=True) #Add data connector
 ss = dc.settings()
 partial = ss['partial']
-partial[op.format_attrib_key('Use')]='1'
+partial[op.attrib_key('Use')]='1'
 partial['row']='10:20'
 
 #Import

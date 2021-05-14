@@ -10,7 +10,7 @@ f = op.path('e')+r'Samples\Import and Export\Partial Import.xlsx'
 wks = op.new_sheet()
 
 #Create data connector object
-dc = op.Connector(wks, dctype='Excel', keep=True)
+dc = op.Connector(wks, dctype='Excel', keep_DC=True)
 ss = dc.settings()
 
 #Headerlines to column label

@@ -16,7 +16,7 @@ partial = ss['partial']
 partial[op.attrib_key('Use')]='1'
 partial['row']='10:20'
 
-#Import
+#import from rwo 10 to row 20
 dc.imp(f)
 
 

@@ -9,7 +9,7 @@ data_folder = op.path('e') + r'Samples\Batch Processing'
 #only to process 3 files
 names = ['T285K.csv', 'T305K.csv', 'T345K.csv']
 pk_centers=[]
-chisqrs=[]
+Rsqrs=[]
 wdata = op.new_sheet()
 graph = op.new_graph(template='scatter')
 gl=graph[0]
@@ -32,7 +32,7 @@ for file in names:
         
     rr=model.result()
     gl.remove(dp)
-    chisqrs.append(rr['chisqr'])
+    Rsqrs.append(rr['adjr'])
     pk_centers.append(rr['xc'])
     
 wdata.get_book().remove()    
@@ -40,4 +40,4 @@ graph.remove()
 wks = op.new_sheet()
 wks.from_list(0, names, 'File Name')
 wks.from_list(1, pk_centers, 'Peak Center')
-wks.from_list(2, chisqrs, 'Chisqr')
+wks.from_list(2, Rsqrs, 'R-sqr')

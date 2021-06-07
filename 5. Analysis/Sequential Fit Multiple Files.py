@@ -14,6 +14,7 @@ wdata = op.new_sheet()
 graph = op.new_graph(template='scatter')
 gl=graph[0]
 model = op.NLFit('Gauss')
+show_hint=True
 for file in names:
     f = os.path.join(data_folder, file)
     print(f'working on {f}')
@@ -21,6 +22,9 @@ for file in names:
     dp = gl.add_plot(wdata, 1, 0)
     gl.rescale()
     model.set_range(dp.lt_range())
+    if show_hint:
+        op.messagebox('You can click the Minimize button on the Parameters Dialog to manipulate the graph')
+        show_hint = False
     model.param_box()
     model.fit()
     if not op.messagebox('Take a look at the fit', True):

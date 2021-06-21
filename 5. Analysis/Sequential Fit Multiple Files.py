@@ -27,11 +27,12 @@ for file in names:
         show_hint = False
     model.param_box()
     model.fit()
-    rr=model.result()
 
     if not op.messagebox('Take a look at the fit', True):
+        model.result()#must call either result or report to end the fitting
         break
         
+    rr=model.result()
     gl.remove(dp)
     Rsqrs.append(rr['adjr'])
     pk_centers.append(rr['xc'])

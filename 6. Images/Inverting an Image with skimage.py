@@ -8,7 +8,7 @@ iw.from_file(fn)
 iw.lname='original image'
 #make a copy to put result
 iw2=iw.duplicate()
-iw2.lname = 'thinning result'
+iw2.lname='inverted'
 img = iw2.to_np()
 inv = invert(img)
 iw2.from_np(inv)

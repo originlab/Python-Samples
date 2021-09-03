@@ -1,3 +1,4 @@
+#recommand to install "opencv-python-headless"
 import cv2
 import numpy as np
 import originpro as op

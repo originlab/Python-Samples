@@ -1,3 +1,4 @@
+#need to install "scikit-image" first
 import originpro as op
 import numpy as np
 from skimage.util import invert

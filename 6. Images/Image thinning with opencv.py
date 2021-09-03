@@ -6,7 +6,6 @@ fn = op.path('e') + r'Samples\Image Processing and Analysis\car.bmp'
 iw=op.new_image()
 iw.from_file(fn)
 iw.lname='original image'
-#loaded image always appear to be RGB, so convert to grayscale in image window first
 iw.rgb2gray()
 #make a copy to put result
 iw2=iw.duplicate()

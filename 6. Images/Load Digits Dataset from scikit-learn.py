@@ -7,6 +7,6 @@ iw = op.new_image()
 iw.setup(1, True)  # set image window is gray scale, with multiple frames
 data = aa[0:10,:,:]
 iw.from_np(data, False)
-iw.set_int('GrayMax',15) #set to show only 16 colors (0-15)
+iw.set_int('GrayMax',16) #set to show only 17 colors (0-16)
 iw.set_int('nav', 3)  # Show navigation bar as slider
 iw.set_str('Palette', 'Fire')

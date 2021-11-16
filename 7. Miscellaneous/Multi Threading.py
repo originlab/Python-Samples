@@ -40,3 +40,5 @@ wks.as_time(1, 10)
 
 wks.from_list(0, v1, 'Name')
 wks.from_list(1, v2, 'Time')
+#has to use LabTalk for setting column width
+wks.lt_exec("wks.col2.width=9")

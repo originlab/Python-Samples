@@ -5,9 +5,9 @@ import originpro as op
 
 #critical section to global data
 def write(tt, name):
-    global colA, colB
-    colA.append(name)
-    colB.append(tt)
+    global v1, v2
+    v1.append(name)
+    v2.append(tt)
     
 #must not do print or anything related to Origin inside the thread function
 def thread_task(lock, name):
@@ -20,8 +20,8 @@ def thread_task(lock, name):
         lock.release()
 
 #global variables to be used inside thread task
-colA=[]
-colB=[]
+v1=[]
+v2=[]
 #we need to have criticlal section for any access to shared data
 lock = threading.Lock()
 
@@ -31,7 +31,12 @@ t1.start()
 t2.start()
 t1.join()
 t2.join()
-wks=op.new_sheet()
-wks.from_list(0, colA, 'Name')
-wks.from_list(1, colB, 'time')
 
+#threads done, we can put data to a worksheet
+wks=op.new_sheet()
+#need to set col(2) as time format before putting data into it
+wks.cols = 2
+wks.as_time(1, 10)
+
+wks.from_list(0, v1, 'Name')
+wks.from_list(1, v2, 'Time')

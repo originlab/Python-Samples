@@ -26,12 +26,9 @@ col = 0
 for file in os.listdir(fd):
     df = pd.read_table(os.path.join(fd, file), header=[0,1,2])    
     wks.from_df(df, col)
-    col_header = df.columns.tolist()
-    lnames = [x[0] for x in col_header]
-    wks.set_labels(lnames, 'L', col)
-    units = [x[1] for x in col_header]
-    wks.set_labels(units, 'U', col)
-    comments = [x[2] for x in col_header]
+    wks.set_labels(df.columns.get_level_values(0), 'L', col)
+    wks.set_labels(df.columns.get_level_values(1), 'U', col)
+    comments = df.columns.get_level_values(2).tolist()
     comments[0] = ""
     wks.set_labels(comments, 'C', col)
     col = wks.cols

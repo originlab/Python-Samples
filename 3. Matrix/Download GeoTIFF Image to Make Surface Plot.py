@@ -1,4 +1,6 @@
 '''
+Origin2023b or later is required to run this sample code.
+
 This example shows how to use Origin Image Window's ability to directly import an image using
 a URL address, which is not yet supported in a matrix window. Once image is downloaded into an
 Image Window, it can be converted to a matrix with the coordinates from the GeoTIFF retained.

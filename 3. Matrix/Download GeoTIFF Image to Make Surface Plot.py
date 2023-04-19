@@ -32,7 +32,7 @@ gl.rescale()
 
 plot.colormap = 'Magma.PAL'
 ax=gl.axis('x')
-ax.to=-153.2
+ax.sto=-153.2
 ay=gl.axis('y')
 ay.set_limits(58.4,59)
 

@@ -13,7 +13,7 @@ iw=op.new_image()
 iw.from_file(url)
 #create an empty matrix and tranfer the image to it
 mat = op.new_book('m')
-op.lt_exec(f'cv2mat img:=[{iw.name}]1! mat:=[{mat.name}]1!')
+mat[0].from_img(iw)
 #you may want to keep the image window and comment out the next line but 
 #it is no longer needed to make the graph
 iw.destroy()

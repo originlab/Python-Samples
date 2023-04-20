@@ -17,7 +17,10 @@ mat[0].from_img(iw)
 #you may want to keep the image window and comment out the next line but 
 #it is no longer needed to make the graph
 iw.destroy()
-#make sure you download the template from Template Center first
+nn=op.olab_download('RaisedReliefMap.otpu')
+if nn < 0:
+    raise Exception("Sorry, failed to download template from Originlab")
+    
 gp = op.new_graph(template='RaisedReliefMap')
 
 #we need to turn on speed mode and hide the speed mode banner

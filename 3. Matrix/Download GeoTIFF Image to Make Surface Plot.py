@@ -17,9 +17,11 @@ mat[0].from_img(iw)
 #you may want to keep the image window and comment out the next line but 
 #it is no longer needed to make the graph
 iw.destroy()
-nn=op.olab_download('RaisedReliefMap.otpu')
+#On Template Center dialog, click any template will open the weblink to see the fid
+#here 939 = RaisedReliefMap.otpu
+nn=op.olab_download(939)
 if nn < 0:
-    raise Exception("Sorry, failed to download template from Originlab")
+    raise Exception("Sorry, failed to download template from Originlab website")
     
 gp = op.new_graph(template='RaisedReliefMap')
 

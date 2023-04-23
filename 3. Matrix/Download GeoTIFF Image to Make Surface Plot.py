@@ -21,6 +21,9 @@ iw.destroy()
 #here 939 = RaisedReliefMap.otpu
 nn=op.olab_download(939)
 if nn < 0:
+    if nn==-30:
+        raise Exception("Your copy of Origin needs to be registered to download templates from Originlab website")
+        
     raise Exception("Sorry, failed to download template from Originlab website")
     
 gp = op.new_graph(template='RaisedReliefMap')

@@ -12,12 +12,10 @@ file_path = op.file_dialog('*.png;*.jpg;*.bmp','Select an Image')
 if len(file_path) ==0:
     raise ValueError('user cancel')
     
-colors, pixel_count = extcolors.extract_from_path(file_path)
-
-colors = np.array(colors)
+colors = extcolors.extract_from_path(file_path)
 
 # rgb = colors[:,0]
-rgb,pixel = map(list, zip(*colors))
+rgb = map(list, zip(*colors))
 
 # print(rgb)
 r = []

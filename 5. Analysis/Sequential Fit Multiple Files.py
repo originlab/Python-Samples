@@ -37,8 +37,8 @@ for file in names:
     Rsqrs.append(rr['adjr'])
     pk_centers.append(rr['xc'])
     
-wdata.get_book().remove()    
-graph.remove()
+wdata.get_book().destroy()    
+graph.destroy()
 wks = op.new_sheet()
 wks.from_list(0, names, 'File Name')
 wks.from_list(1, pk_centers, 'Peak Center')

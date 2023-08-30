@@ -20,4 +20,4 @@ gp[0].rescale()
 gp = op.new_graph(template='TriContour')
 p = gp[0].add_plot(wks,coly=1,colx=0,colz=2, type=243)
 p.colormap = 'Maple.pal'
-gl.rescale()
+gp[0].rescale()

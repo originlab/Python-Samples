@@ -5,7 +5,7 @@ Please note that a file named my_py_test.png will be replaced by running this sa
 import originpro as op
 
 #from Learning Center folder
-op.open(op.path('c')+ r'\Graphing\Trellis Plots - Box Charts.opju')
+op.open(op.path('c')+ r'\Graphing\Multi-Panel Graphs - Trellis Box Plot.opju')
 
 gg=op.find_graph(0)
 

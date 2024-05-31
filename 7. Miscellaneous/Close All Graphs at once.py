@@ -1,5 +1,5 @@
 '''
-This sample shows how to close all graphs at once
+This sample shows how to close all graphs at once by LabTalk script
 '''
 import originpro as op
 

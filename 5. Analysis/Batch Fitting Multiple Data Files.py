@@ -12,7 +12,7 @@ wks = op.new_sheet()
 wks_result = op.new_sheet()
 
 
-wts = [0, 25, 100, 150, 200]
+wts = [0, 25, 100, 150, 250]
 for i, wt in enumerate(wts):    
     # Import each data file into wks
     fd = op.path('e') + 'Samples\Batch2'
